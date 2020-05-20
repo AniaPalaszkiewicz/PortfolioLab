@@ -1,6 +1,7 @@
 import React, {useState,useEffect} from 'react';
-import HomeHeader from "./components/Home/HomeHeader"
-import Home from "./components/Home"
+import Home from "./components/Home";
+import Login from "./components/Login";
+import Register from "./components/Register";
 import {
     HashRouter,
     Route,
@@ -9,13 +10,16 @@ import {
     NavLink,
 } from 'react-router-dom';
 
+import HomeHeader from "./components/HomeHeader";
+
 function App() {
     return <HashRouter>
         <div className="app-container">
             <HomeHeader/>
             <Switch>
                 <Route exact path='/' component={Home}  />
-
+                <Route  path='/login' component={Login}  />
+                <Route  path='/register' component={Register}  />
             </Switch>
         </div>
 
