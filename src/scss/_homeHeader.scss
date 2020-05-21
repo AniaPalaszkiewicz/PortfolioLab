@@ -1,0 +1,36 @@
+.section.header {
+  position: absolute;
+  width: 90%;
+  align-items: flex-end;
+  flex-direction: column;
+
+  ul {
+    display: flex;
+  }
+}
+.header-ul{
+  margin-top: 1.26vw;
+}
+.header-ul a {
+  font-family: $font-base;
+  color:$color4;
+  font-size: 0.73vw;
+  text-decoration: none;
+  opacity: 1;
+  letter-spacing: 0;
+  text-align: right;
+  margin-left: 15px;
+
+}
+.second a{
+  font-size: 0.94vw;
+  color: $color5;
+
+}
+
+.second li:first-child a{
+  padding: 0.5vw 1vw;
+  border:  0.03vw solid gray;
+  ;
+
+}
