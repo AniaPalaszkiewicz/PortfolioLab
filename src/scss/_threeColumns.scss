@@ -1,0 +1,39 @@
+.threeColumns {
+  height: 20vw;
+  width: 100% ;
+  background-color: $color3;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+
+
+}
+.column {
+  width: 17vw;
+  height: 13vw;
+  text-align: center;
+  color: $color5;
+
+  h1 {
+    font-size: 4.7vw;
+    font-weight: 300;
+    padding-bottom: 1.4vw;
+  }
+
+  h3 {
+    font-size: 0.9vw;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 1.4vw;
+
+  }
+
+  p {
+    font-size: 0.84vw;
+    line-height: 1.3vw;
+    font-weight: 400;
+
+
+  }
+}

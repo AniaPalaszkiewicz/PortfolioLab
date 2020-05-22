@@ -20,9 +20,9 @@ export default function HomeHeader() {
             </ul>
             <ul className="header-ul second">
                 <li><LinkRouter className="navlink" to="/">Start</LinkRouter></li>
-                <li><Link to="threeColumns" {...options}>O co chodzi?</Link></li>
+                <li><Link to="fourSteps" {...options}>O co chodzi?</Link></li>
                 <li><Link to="aboutUs" {...options}>O nas</Link></li>
-                <li><Link to="aboutUs" {...options}>Fundacja i organizacje</Link></li>
+                <li><Link to="ourHelp" {...options}>Fundacja i organizacje</Link></li>
                 <li><Link to="contact" {...options}>Kontakt</Link></li>
             </ul>
         </div>

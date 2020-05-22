@@ -23,18 +23,20 @@
   justify-content: center;
   flex-direction: column;
 
-  h1 {
-    font-size: 2vw;
-    text-align: center;
+  img {
+    width: 15vw;
+    margin-top: 1.4vw;
   }
 }
 
-.button ul {
-  display: flex;
-  flex-direction: row;
-  margin-top: 3vw;
+h1 {
+  font-size: 2vw;
+  text-align: center;
+  line-height: 2.7vw;
+}
 
-  a {
+.button {
+  .navlink {
     text-decoration: none;
     color: $color5;
     font-size: 1.89vw;
@@ -42,6 +44,7 @@
     text-transform: uppercase;
     border: 0.03vw solid gray;
     margin-left: 1vw;
+    margin-right: 1vw;
     padding: 1vw;
     width: 13vw;
     display: block;
@@ -50,4 +53,12 @@
 
   }
 
+  ul {
+    display: flex;
+    flex-direction: row;
+    margin-top: 3vw;
+
+  }
+
 }
+
