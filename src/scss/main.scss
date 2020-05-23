@@ -7,16 +7,16 @@
 @import "homeHeader";
 @import "threeColumns";
 @import "fourSteps";
+@import "aboutUs";
+@import "ourHelp";
+@import "contact";
+@import "homeFooter";
 
 body{
   font-family: $font-base;
 
 }
-.homeheader{
-  width: 100%;
-  height: 200px;
-  border: 1px solid red;
-}
+
 
 .section{
   width: 100%;

@@ -11,7 +11,6 @@ export default function HomeHeader() {
         border: ' 1px solid yellow'
     };
 
-
     return (
         <div className="section header">
             <ul className="header-ul">

@@ -1,0 +1,28 @@
+.banner.people {
+  background-image: url("../assets/People.jpg");
+  background-position: left;
+}
+
+.start-help {
+  > div {
+    width: 28vw;
+    margin-top: 2vw;
+
+    > p {
+      line-height: 2vw;
+      text-align: center;
+    }
+  }
+}
+
+.aboutUs {
+  height: 100%;
+  background-color: $color1;
+}
+
+.sign {
+  width: 11vw;
+  height: 7.8vw;
+  padding-top: 2vw;
+ padding-left: 18vw;
+}

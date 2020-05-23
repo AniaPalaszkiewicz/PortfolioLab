@@ -10,7 +10,7 @@ export default function Start() {
             <div className="start-help">
                 <h1>Zacznij pomagać!<br></br>
                     Oddaj niechaciane rzeczy w zaufane ręce</h1>
-                <img src={decoration} alt=""/>
+                <img className="decoration" src={decoration} alt=""/>
                 <div className="button">
                     <ul>
                         <li><LinkRouter className="navlink" to="/login">Oddaj rzeczy</LinkRouter></li>

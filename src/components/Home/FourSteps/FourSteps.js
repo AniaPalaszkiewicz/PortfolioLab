@@ -10,7 +10,7 @@ export default function FourSteps() {
     return (
         <div className="foursteps" id='fourSteps'>
             <h1>Wystarczą 4 proste kroki</h1>
-            <img src={decoration} alt=""/>
+            <img className="decoration" src={decoration} alt=""/>
             <div className="threeColumns steps">
                 <div>
                 <div className="column col">
