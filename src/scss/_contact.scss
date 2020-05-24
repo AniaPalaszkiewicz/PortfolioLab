@@ -12,7 +12,7 @@
 }
 .contactForm {
   .decoration {
-    margin-bottom: 3.7vw;
+    margin-bottom: 2.5vw;
   }
 
   position: absolute;
@@ -27,6 +27,20 @@ form{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  >div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2vw;
+    p{
+      font-size:1.1vw;
+      line-height: 1.5vw;
+      color: green;
+      font-weight: 700;
+      width: 60%;
+      text-align: center;
+    }
+  }
 }
 
 
@@ -40,6 +54,12 @@ form{
       display: inline-flex;
       flex-direction: column;
       margin-bottom: 2.3vw;
+      p {
+        border-top: 0.75px solid red;
+        padding-top:0.3vw;
+        font-size: 0.7vw;
+        color: red;
+      }
     }
 
     input {
