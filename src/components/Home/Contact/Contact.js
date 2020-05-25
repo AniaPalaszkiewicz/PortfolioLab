@@ -26,12 +26,26 @@ export default function Contact() {
         setContact({...contact, [e.target.name]: e.target.value})
     };
 
+    function handleErrors(response) {
+        if (!response.ok) {
+            throw Error(response.statusText)
+        }
+        return response;
+    }
+
     const createNewContact = (contact) => {
-        fetch(`http://fer-api.coderslab.pl/v1/portfolio/contact`, {
+        fetch(`https://fer-api.coderslab.pl/v1/portfolio/contact`, {
             method: "POST",
             body: JSON.stringify(contact),
             headers: {"Content-Type": "application/json"},
-        });
+
+        }).then(handleErrors)
+            .then(function (response) {
+                console.log("ok");
+            }).catch(function (error) {
+            console.log(error);
+        })
+
     };
 
 
