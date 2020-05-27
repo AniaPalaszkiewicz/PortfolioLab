@@ -1,0 +1,17 @@
+.logout{
+  width: 30vw;
+  .navlink{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3vw;
+    width: 8vw;
+    font-size: 1vw;
+    text-transform: capitalize;
+    color:#000000;
+    border: 0.75px solid gray;
+    margin-top: 2vw;
+
+  }
+}
