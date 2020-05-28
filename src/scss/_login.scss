@@ -17,22 +17,23 @@
   justify-content: center;
   flex-direction: column;
   padding: 1vw;
+  padding-top: 0;
   margin-left: 4vw;
 
-  label{
+  label {
     font-size: 1vw;
     font-weight: 600;
+    margin-top: 1vw;
 
   }
 
-  input{
+  input {
     display: block;
     width: 13.1vw;
     border: 0;
-    border-bottom: 0.75px solid $color4;
+    border-bottom: 0.75px solid #3C3C3C26;
     background-color: $color1;
-    margin-top: 1.5vw;
-    margin-bottom:1.5vw;
+    outline-style: none;
   }
 
 }
@@ -42,11 +43,11 @@
   align-items: center;
   justify-content: space-between;
   margin-top: 3vw;
-  width: 30vw ;
-  .frame{
-border: 0;
-  }
+  width: 30vw;
 
+  .frame {
+    border: 0;
+  }
 
 
   .navlink {
@@ -60,12 +61,17 @@ border: 0;
     text-transform: capitalize;
     padding: 0;
     margin: 0;
-    color:#000000;
+    color: #000000;
     font-family: $font-base;
     outline-style: none;
 
 
-
-
   }
+}
+
+p {
+  border-top: 0.75px solid red;
+  padding-top: 0.3vw;
+  font-size: 0.7vw;
+  color: red;
 }
