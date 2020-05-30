@@ -2,6 +2,7 @@ import React,{useState} from 'react';
 import decoration from "../../assets/Decoration.svg";
 import {NavLink as LinkRouter} from "react-router-dom";
 
+
 export default function Register() {
     const [errors, setErrors] = useState({
         email: "",

@@ -11,6 +11,7 @@ import {
     Switch,
     NavLink,
 } from 'react-router-dom';
+import GiveThings from "./components/GiveThings";
 
 
 
@@ -23,6 +24,7 @@ function App() {
                 <Route  path='/login' component={Login}  />
                 <Route  path='/register' component={Register}  />
                 <Route  path='/wylogowano' component={Logout}  />
+                <Route  path='/oddaj-rzeczy' component={GiveThings}  />
             </Switch>
         </div>
 
