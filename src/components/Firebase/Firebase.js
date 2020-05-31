@@ -1,5 +1,6 @@
 import app from "firebase/app";
 import 'firebase/auth';
+import 'firebase/firebase-firestore'
 
 const config = {
     apiKey: "AIzaSyAwK7g0cN2OWJy5-CGXuJfYsM5nscdh1cE",
@@ -11,24 +12,23 @@ const config = {
     appId: "1:706702384233:web:da36fa725125671f0256f8"
 };
 
-
 class Firebase {
     constructor() {
         app.initializeApp(config);
-
         this.auth = app.auth();
+        this.db = app.firestore()
     }
 
     // *** Auth API ***
 
-    doCreateUserWithEmailAndPassword = (email, password) =>
+    register = (email, password) =>
         this.auth.createUserWithEmailAndPassword(email, password);
 
-    doSignInWithEmailAndPassword = (email, password) =>
+    login = (email, password) =>
         this.auth.signInWithEmailAndPassword(email, password);
 
 
-    doSignOut = () => this.auth.signOut();
+    logout = () => this.auth.signOut();
 
     // doPasswordReset = email => this.auth.sendPasswordResetEmail(email);
     //
@@ -36,4 +36,4 @@ class Firebase {
     //     this.auth.currentUser.updatePassword(password);
 }
 
-export default Firebase;
+export default  new Firebase();

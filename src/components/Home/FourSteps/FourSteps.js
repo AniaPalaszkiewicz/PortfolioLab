@@ -5,6 +5,7 @@ import icon1 from "../../../assets/Icon-1.svg"
 import icon2 from "../../../assets/Icon-2.svg"
 import icon3 from "../../../assets/Icon-3.svg"
 import icon4 from "../../../assets/Icon-4.svg"
+import {AuthUserContext} from "../../Session";
 
 export default function FourSteps() {
     return (
@@ -40,7 +41,11 @@ export default function FourSteps() {
                 </div>
             </div>
             <div className="button">
-                <LinkRouter className="navlink" to="/login">Oddaj rzeczy</LinkRouter>
+                <AuthUserContext.Consumer>
+                    {authUser =>
+                            <LinkRouter className="navlink" to= {authUser ? "/oddaj-rzeczy": "/login"}>Oddaj rzeczy</LinkRouter>
+                    }
+                </AuthUserContext.Consumer>
             </div>
         </div>
     );
