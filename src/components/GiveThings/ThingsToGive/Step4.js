@@ -43,6 +43,7 @@ export default function Step4({props}) {
     };
 
     return (
+        <>
         <div className="step1">
             <h5>Krok {counter} /4</h5>
             <h1>Podaj adres oraz termin odbioru rzeczy przez kuriera</h1>
@@ -67,10 +68,12 @@ export default function Step4({props}) {
                     <label> Uwagi dla kuriera <textarea onChange={handleChange} value={formData.desc} name="desc"/> </label>
                 </div>
             </form>
+
+        </div>
             {counter > 5 ? null : <div>{counter === 1 ? null : <button onClick={Minus}>Wstecz</button>}
                 <button onClick={four}>{counter === 5 ? "Potwierdź" : "Dalej"}</button>
             </div>}
-        </div>
+            </>
     );
 }
 

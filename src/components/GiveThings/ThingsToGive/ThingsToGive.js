@@ -51,10 +51,7 @@ export default function ThingsToGive() {
                 {counter === 4 ? <Step4 props={props}/> : null}
                 {counter === 5 ? <Step5 props={props}/> : null}
                 {counter === 6 ? <Step6 props={props}/> : null}
-
-
             </div>
-
         </>
     );
 }

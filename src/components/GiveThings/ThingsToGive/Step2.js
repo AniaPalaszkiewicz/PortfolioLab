@@ -11,6 +11,7 @@ export default function Step2({props}) {
         }
     };
     return (
+        <>
         <div className="step1">
             <h5>Krok {counter} /4</h5>
             <h1>Podaj liczbę 60l worków, w które spakowałeś/aś rzeczy:</h1>
@@ -27,10 +28,12 @@ export default function Step2({props}) {
                 </label>
             </form>
             {error && <p>{error}</p>}
+
+        </div>
             {counter > 5 ? null : <div>{counter === 1 ? null : <button onClick={Minus}>Wstecz</button>}
                 <button onClick={two}>{counter === 5 ? "Potwierdź" : "Dalej"}</button>
             </div>}
-        </div>
+            </>
     );
 }
 

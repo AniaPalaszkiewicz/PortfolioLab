@@ -1,10 +1,17 @@
 .step1 {
+  margin-left:5vw;
   height: 100%;
   width: 80vw;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
+  p {
+    font-size: 1vw;
+    font-weight: bold;
+    color: red;
+    margin-top: 0.5vw;
+  }
   input[type="radio"]{
     display: none;
     margin-top: 2vw;

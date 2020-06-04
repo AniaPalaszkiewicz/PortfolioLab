@@ -11,12 +11,12 @@ export default function How() {
                 <h1>Oddaj rzeczy, których już nie chcesz<br></br>
                     POTRZEBUJĄCYM</h1>
                 <img className="decoration" src={decoration} alt=""/>
-                <h1>Wystarczą 4 proste kroki:</h1>
-                <div className="button">
-                   <div>1 Wybierz rzeczy</div>
-                   <div>2 Spakuj je w worki</div>
-                   <div>3 Wybierz fundację</div>
-                   <div>4 Zamów kuriera</div>
+                <h2>Wystarczą 4 proste kroki:</h2>
+                <div className="buttonOne">
+                    <div>1 <span>Wybierz rzeczy</span></div>
+                    <div>2 <span>Spakuj je w worki</span></div>
+                    <div>3 <span>Wybierz fundację</span></div>
+                    <div>4 <span>Zamów kuriera</span></div>
                 </div>
             </div>
         </div>

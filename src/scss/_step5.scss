@@ -1,20 +1,31 @@
 .step5 {
   display: flex;
   justify-content: center;
-  h3, h4 {
+  h3 {
     margin-bottom: 1vw;
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  h4 {
+    margin-bottom: 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     img{
       width:2.6vw;
       height: 2.6vw;
       margin-right: 1vw;
     }
+    span {
+      width: 55%;
+      text-align: right;
+    }
   }
 }
 
 .resume {
+  margin-right: 3vw;
 
   h3,h4 {
     display: flex;

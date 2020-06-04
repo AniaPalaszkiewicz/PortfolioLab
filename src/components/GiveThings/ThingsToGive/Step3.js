@@ -36,6 +36,7 @@ export default function Step3({props, handleCheckbox}) {
     };
 
     return (
+        <>
         <div className="step1">
             <h5>Krok {counter} /4</h5>
             <h1>Lokalizacja:</h1>
@@ -83,10 +84,12 @@ export default function Step3({props, handleCheckbox}) {
                 </label>
                 {errors.localization && <p>{errors.localization}</p>}
             </form>
+
+        </div>
             {counter > 5 ? null : <div>{counter === 1 ? null : <button onClick={Minus}>Wstecz</button>}
                 <button onClick={three}>{counter === 5 ? "Potwierdź" : "Dalej"}</button>
             </div>}
-        </div>
+            </>
     );
 }
 
