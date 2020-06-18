@@ -1,8 +1,13 @@
 import React,{useState} from 'react';
 import decoration from "../../assets/Decoration.svg";
-import {NavLink as LinkRouter} from "react-router-dom";
+import {NavLink as LinkRouter, withRouter, useHistory} from "react-router-dom";
+import { compose } from 'recompose';
+import Firebase from "../Firebase/Firebase";
+import {withFirebase} from "../Firebase";
 
-export default function Register() {
+
+function RegisterBase() {
+    const history = useHistory();
     const [errors, setErrors] = useState({
         email: "",
         password: "",
@@ -23,7 +28,7 @@ export default function Register() {
         setRegister({...register, [e.target.name]: e.target.value})
     };
 
-    const handleSubmit = (event) => {
+    async function handleSubmit(event) {
         event.preventDefault();
         let email = "";
         let password = "";
@@ -42,17 +47,27 @@ export default function Register() {
             setErrors({...errors,email:email, password:password, password2:password2});
             return;
         }
-        setRegister({
-            email:"",
-            password:"",
-            password2:""
-        });
+        Firebase
+            .register(register.email, register.password)
+            .then(authUser => {
+                setRegister({
+                email:"",
+                password:"",
+                password2:""
+            });
+                history.push('/')
+            })
+            .catch(error=>
+            alert(error.message));
+
         setErrors({
             email:"",
             password:"",
             password2:""
         });
-    };
+    }
+
+
     return (
         <div className="login">
             <h1>Załóż konto</h1>
@@ -83,3 +98,7 @@ export default function Register() {
         </div>
     );
 }
+
+const Register = compose(withRouter,withFirebase)(RegisterBase);
+
+export default Register;

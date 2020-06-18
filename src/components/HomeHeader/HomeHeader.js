@@ -1,6 +1,9 @@
 import React from 'react';
 import {NavLink as LinkRouter} from "react-router-dom";
 import {Link} from "react-scroll";
+import {AuthUserContext} from "../Session";
+import UpperHeader from "./UpperHeader";
+import UpperHeaderLoggedIn from "./UpperHeaderLoggedIn";
 const options={
     smooth:true,
     offset:0,
@@ -13,10 +16,11 @@ export default function HomeHeader() {
 
     return (
         <div className="section header">
-            <ul className="header-ul">
-                <li><LinkRouter className="navlink" to="/login" activeStyle={activeStyle}>Zaloguj się!</LinkRouter></li>
-                <li><LinkRouter className="navlink" to="/register" activeStyle={activeStyle}>Załóż konto!</LinkRouter></li>
-            </ul>
+            <AuthUserContext.Consumer>
+                {authUser =>
+                    authUser ? <UpperHeaderLoggedIn/> : <UpperHeader/>
+                }
+            </AuthUserContext.Consumer>
             <ul className="header-ul second">
                 <li><LinkRouter className="navlink" to="/">Start</LinkRouter></li>
                 <li><Link to="fourSteps" {...options}>O co chodzi?</Link></li>

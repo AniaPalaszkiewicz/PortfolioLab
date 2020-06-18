@@ -1,8 +1,13 @@
 import React, {useState} from 'react';
 import decoration from "../../assets/Decoration.svg";
-import {NavLink as LinkRouter} from "react-router-dom";
+import {NavLink as LinkRouter, withRouter, useHistory} from "react-router-dom";
+import { compose } from 'recompose';
+import Firebase from "../Firebase/Firebase";
+import {withFirebase} from "../Firebase";
 
-export default function Login() {
+
+function LoginBase() {
+    const history = useHistory();
     const [errors, setErrors] = useState({
         email: "",
         password: ""
@@ -20,7 +25,7 @@ export default function Login() {
         setLogin({...login, [e.target.name]: e.target.value})
     };
 
-    const handleSubmit = (event) => {
+    async function handleSubmit(event) {
         event.preventDefault();
         let email = "";
         let password = "";
@@ -35,15 +40,25 @@ export default function Login() {
             setErrors({...errors,email:email, password:password});
             return;
         }
-        setLogin({
-            email:"",
-            password:""
-        });
+        Firebase
+            .login(login.email, login.password)
+            .then(()=> {
+                setLogin({
+                    email:"",
+                    password:""
+                });
+                history.push('/')
+            })
+            .catch(error =>
+            alert(error.message));
+
+
         setErrors({
             email:"",
             password:""
         });
-    };
+    }
+
     return (
         <div className="login">
             <h1>Zaloguj się</h1>
@@ -69,3 +84,7 @@ export default function Login() {
         </div>
     );
 }
+
+const Login = compose(withRouter, withFirebase)(LoginBase);
+
+export default Login

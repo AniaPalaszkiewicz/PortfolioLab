@@ -1,0 +1,46 @@
+.ban{
+  background-image:url("../assets/Form-Hero-Image.jpg");
+  background-position: center;
+
+}
+.start-help {
+  h2 {
+    margin-top: 1vw;
+    color: grey;
+    font-size: 2vw;
+    text-align: center;
+    line-height: 2.7vw;
+  }
+  .buttonOne {
+    margin-top: 4vw;
+    width: 68%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    div {
+      margin: 0 1.5vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: gray;
+
+      span {
+        text-align: center;
+        font-size: 1.2vw;
+
+      }
+    }
+
+    div:before {
+      content: "";
+      width: 7vw;
+      height: 7vw;
+      border: 1px solid gray;
+      position: absolute;
+      transform: rotate(45deg);
+    }
+
+  }
+}

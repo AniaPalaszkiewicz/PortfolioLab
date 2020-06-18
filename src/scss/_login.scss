@@ -20,6 +20,14 @@
   padding-top: 0;
   margin-left: 4vw;
 
+  p {
+    border-top: 0.75px solid red;
+    padding-top: 0.3vw;
+    font-size: 0.7vw;
+    color: red;
+  }
+
+
   label {
     font-size: 1vw;
     font-weight: 600;
@@ -69,9 +77,3 @@
   }
 }
 
-p {
-  border-top: 0.75px solid red;
-  padding-top: 0.3vw;
-  font-size: 0.7vw;
-  color: red;
-}

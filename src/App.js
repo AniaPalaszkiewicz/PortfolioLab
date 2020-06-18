@@ -4,6 +4,9 @@ import Login from "./components/Login";
 import Register from "./components/Register";
 import HomeHeader from "./components/HomeHeader";
 import Logout from "./components/Logout"
+import {withFirebase} from "./components/Firebase";
+import Firebase from "./components/Firebase/Firebase"
+import {AuthUserContext} from "./components/Session"
 import {
     HashRouter,
     Route,
@@ -11,11 +14,38 @@ import {
     Switch,
     NavLink,
 } from 'react-router-dom';
+import GiveThings from "./components/GiveThings";
 
 
 
 function App() {
-    return <HashRouter>
+    const [authUser, setAuthUser] = useState(null);
+
+    useEffect(()=>{
+        const unsubscribe = onAuthStateChange();
+        return () => {unsubscribe()}
+    },[]);
+
+    if(!authUser){
+        console.log('no user');
+    }else{
+        console.log('user logged');
+    }
+    function onAuthStateChange () {
+        return Firebase.auth.onAuthStateChanged(user => {
+            if(user){
+                console.log('user is logged in');
+                setAuthUser(user)
+            }else {
+                console.log('user is not logged in');
+                setAuthUser(null)
+            }
+        })
+    }
+
+
+    return <AuthUserContext.Provider value={authUser}>
+    <HashRouter>
         <div className="app-container">
             <HomeHeader/>
             <Switch>
@@ -23,11 +53,11 @@ function App() {
                 <Route  path='/login' component={Login}  />
                 <Route  path='/register' component={Register}  />
                 <Route  path='/wylogowano' component={Logout}  />
+                <Route  path='/oddaj-rzeczy' component={GiveThings}  />
             </Switch>
         </div>
-
-    </HashRouter>;
-
+    </HashRouter>
+    </AuthUserContext.Provider>
 }
 
-export default App;
+export default withFirebase(App);

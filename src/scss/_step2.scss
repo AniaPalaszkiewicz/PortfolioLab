@@ -1,0 +1,46 @@
+.step1{
+  select{
+    width: 15vw;
+    height: 2vw;
+  background-color: $color1;
+  }
+  input[type="checkbox"]{
+    display: none;
+  }
+.checkboxDiv{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+  .checkbox {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 1.2vw;
+    font-weight: 200;
+    margin-top: 1vw;
+    margin-right: 1vw;
+
+    span {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: fit-content;
+      height: 2vw;
+      padding: 0.5vw 1vw;
+      display: flex;
+      align-items: center;
+      border: 1px solid $color5;
+    }
+    span:before, span:after{
+      content:none;
+    }
+
+    input:checked+span {
+      background: $color3;
+
+    }
+
+
+  }
+}
+

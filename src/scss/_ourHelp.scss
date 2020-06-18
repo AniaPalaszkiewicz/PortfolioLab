@@ -23,6 +23,8 @@
   button {
     background-color: white;
     outline-style: none;
+    height: 5vw;
+    cursor: pointer;
   }
 
   button:hover {
@@ -91,6 +93,6 @@
     border: 0;
     padding: 0;
     cursor: pointer;
-
   }
 }
+
