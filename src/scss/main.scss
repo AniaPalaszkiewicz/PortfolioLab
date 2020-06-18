@@ -5,17 +5,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 @import "start";
 @import "homeHeader";
-
+@import "threeColumns";
+@import "fourSteps";
+@import "aboutUs";
+@import "ourHelp";
+@import "contact";
+@import "homeFooter";
+@import "login";
+@import "register";
+@import "logout";
 body{
   font-family: $font-base;
 
 }
-.homeheader{
-  width: 100%;
-  height: 200px;
-  border: 1px solid red;
-}
 
-.active {
-  border: 1px solid blue;
+
+.section{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.app-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

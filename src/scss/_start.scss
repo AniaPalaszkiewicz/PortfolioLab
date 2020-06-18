@@ -1,18 +1,65 @@
-.start{
+.start {
+  height: 50vw;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 
-.banner{
-  height: 400px;
-  width:50%;
+.banner {
+  height: 100%;
+  width: 50%;
   background-image: url('../assets/Home-Hero-Image.jpg');
-  background-position: left;
+  background-position: right;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
 }
-.start-help{
-width: 50%;
+
+.start-help {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+
 }
+.decoration {
+  width: 15vw;
+  margin-top: 1.4vw;
+}
+
+h1 {
+  font-size: 2vw;
+  text-align: center;
+  line-height: 2.7vw;
+}
+
+.button {
+  .navlink {
+    text-decoration: none;
+    color: $color5;
+    font-size: 1.89vw;
+    font-weight: 300;
+    text-transform: uppercase;
+    border: 0.03vw solid gray;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    padding: 1vw;
+    width: 13vw;
+    display: block;
+    text-align: center;
+
+
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    margin-top: 3vw;
+
+  }
+
+}
+

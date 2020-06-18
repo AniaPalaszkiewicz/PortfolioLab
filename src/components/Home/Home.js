@@ -5,7 +5,7 @@ import FourSteps from "./FourSteps";
 import AboutUs from "./AboutUs";
 import OurHelp from "./OurHelp";
 import Contact from "./Contact";
-import HomeFooter from "./HomeFooter";
+
 
 
 export default function Home() {
@@ -17,7 +17,7 @@ export default function Home() {
             <AboutUs/>
             <OurHelp/>
             <Contact/>
-            <HomeFooter/>
+
         </>
     );
 }
